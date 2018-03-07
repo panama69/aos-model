@@ -5,7 +5,7 @@
     <objects>
         <object type="Link" technology="Web">
             <name>SPEAKERS</name>
-            <codeName>SPEAKERSLink</codeName>
+            <codeName>SPEAKERS</codeName>
             <description></description>
             <identification>
                 <properties>
@@ -19,7 +19,7 @@
         </object>
         <object type="Link" technology="Web">
             <name>TABLETS</name>
-            <codeName>TABLETSLink</codeName>
+            <codeName>TABLETS</codeName>
             <description></description>
             <identification>
                 <properties>
@@ -33,7 +33,7 @@
         </object>
         <object type="Image" technology="Web">
             <name>TABLET</name>
-            <codeName>TABLETImage</codeName>
+            <codeName>TABLET</codeName>
             <description></description>
             <identification>
                 <properties>
@@ -47,7 +47,7 @@
         </object>
         <object type="Button" technology="Web">
             <name>ADD_TO_CART</name>
-            <codeName>ADDTOCARTButton</codeName>
+            <codeName>ADD_TO_CART</codeName>
             <description></description>
             <identification>
                 <properties>
@@ -59,30 +59,29 @@
         </object>
         <object type="WebElement" technology="Web">
             <name>CHECK_OUT_CART</name>
-            <codeName>CHECKOUTCARTWebElement</codeName>
+            <codeName>CHECK_OUT_CART</codeName>
             <description></description>
             <identification>
                 <properties>
-                    <property name="TagName" type="string" isRegExp="false">path</property>
-                    <property name="CSSSelector" type="string" isRegExp="false">svg#menuCart &gt; path</property>
+                    <property name="XPath" type="string" isRegExp="false">//*[@id="menuCart"]</property>
                 </properties>
             </identification>
         </object>
         <object type="Button" technology="Web">
             <name>check_out_btn</name>
-            <codeName>CheckOutBtnButton</codeName>
+            <codeName>CHECK_OUT</codeName>
             <description></description>
             <identification>
                 <properties>
                     <property name="ButtonType" type="string" isRegExp="false">submit</property>
-                    <property name="Name" type="string" isRegExp="true">CHECKOUT \(\$.*\)</property>
+                    <property name="Name" type="string" isRegExp="true">CHECKOUT \(.*\)</property>
                     <property name="TagName" type="string" isRegExp="false">BUTTON</property>
                 </properties>
             </identification>
         </object>
         <object type="WebElement" technology="Web">
             <name>REMOVE</name>
-            <codeName>REMOVEWebElement</codeName>
+            <codeName>REMOVE</codeName>
             <description></description>
             <identification>
                 <properties>
@@ -93,7 +92,7 @@
         </object>
         <object type="Link" technology="Web">
             <name>CONTINUE SHOPPING</name>
-            <codeName>CONTINUESHOPPINGLink</codeName>
+            <codeName>CONTINUE_SHOPPING</codeName>
             <description></description>
             <identification>
                 <properties>
@@ -104,7 +103,7 @@
         </object>
         <object type="Image" technology="Web">
             <name>SPEAKER</name>
-            <codeName>SPEAKERImage</codeName>
+            <codeName>SPEAKER</codeName>
             <description></description>
             <identification>
                 <properties>
