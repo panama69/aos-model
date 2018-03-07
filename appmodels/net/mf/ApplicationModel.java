@@ -68,7 +68,7 @@ public class ApplicationModel extends AppModelBase {		private SPEAKERSLink SPEAK
 		protected com.hp.lft.sdk.web.LinkDescription createDescription() throws GeneralLeanFtException{
 			com.hp.lft.sdk.web.LinkDescription description = null; 
 			try{
-				description = new com.hp.lft.sdk.web.LinkDescription.Builder().innerText("Audio").tagName("SPAN").build();
+				description = new com.hp.lft.sdk.web.LinkDescription.Builder().innerText("SPEAKERS").tagName("SPAN").build();
 			}catch(Exception e){
 				throw new GeneralLeanFtException(e.getMessage(), e);
 			}

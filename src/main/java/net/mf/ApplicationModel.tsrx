@@ -9,7 +9,7 @@
             <description></description>
             <identification>
                 <properties>
-                    <property name="InnerText" type="string" isRegExp="false">Audio</property>
+                    <property name="InnerText" type="string" isRegExp="false">SPEAKERS</property>
                     <property name="TagName" type="string" isRegExp="false">SPAN</property>
                 </properties>
             </identification>
