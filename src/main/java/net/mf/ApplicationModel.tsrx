@@ -102,5 +102,19 @@
                 </properties>
             </identification>
         </object>
+        <object type="Image" technology="Web">
+            <name>SPEAKER</name>
+            <codeName>SPEAKERImage</codeName>
+            <description></description>
+            <identification>
+                <properties>
+                    <property name="Alt" type="string" isRegExp="false"></property>
+                    <property name="ClassName" type="string" isRegExp="false">imgProduct</property>
+                    <property name="Src" type="string" isRegExp="true">.*\/catalog\/fetchImage\?image_id=4200</property>
+                    <property name="TagName" type="string" isRegExp="false">IMG</property>
+                    <property name="Type" type="enum" isRegExp="false">Normal</property>
+                </properties>
+            </identification>
+        </object>
     </objects>
 </applicationModel>

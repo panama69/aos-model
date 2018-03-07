@@ -25,6 +25,7 @@ public class ApplicationModel extends AppModelBase {		private SPEAKERSLink SPEAK
 	private CheckOutBtnButton CheckOutBtnButton;
 	private REMOVEWebElement REMOVEWebElement;
 	private CONTINUESHOPPINGLink CONTINUESHOPPINGLink;
+	private SPEAKERImage SPEAKERImage;
 	
 	public ApplicationModel(TestObject contextTestObject) throws GeneralLeanFtException
 	{
@@ -37,6 +38,7 @@ public class ApplicationModel extends AppModelBase {		private SPEAKERSLink SPEAK
 		CheckOutBtnButton = new CheckOutBtnButton(contextTestObject, this);
 		REMOVEWebElement = new REMOVEWebElement(contextTestObject, this);
 		CONTINUESHOPPINGLink = new CONTINUESHOPPINGLink(contextTestObject, this);
+		SPEAKERImage = new SPEAKERImage(contextTestObject, this);
 		rebuildDescriptions();
 	}	
 
@@ -48,6 +50,7 @@ public class ApplicationModel extends AppModelBase {		private SPEAKERSLink SPEAK
 		public CheckOutBtnButton CheckOutBtnButton() { return CheckOutBtnButton; }
 		public REMOVEWebElement REMOVEWebElement() { return REMOVEWebElement; }
 		public CONTINUESHOPPINGLink CONTINUESHOPPINGLink() { return CONTINUESHOPPINGLink; }
+		public SPEAKERImage SPEAKERImage() { return SPEAKERImage; }
 
 		public class SPEAKERSLink extends LinkNodeBase
 	{
@@ -248,6 +251,32 @@ public class ApplicationModel extends AppModelBase {		private SPEAKERSLink SPEAK
 			com.hp.lft.sdk.web.LinkDescription description = null; 
 			try{
 				description = new com.hp.lft.sdk.web.LinkDescription.Builder().innerText("CONTINUE SHOPPING").tagName("A").build();
+			}catch(Exception e){
+				throw new GeneralLeanFtException(e.getMessage(), e);
+			}
+			return description;
+		}
+
+				
+			}
+
+	public class SPEAKERImage extends ImageNodeBase
+	{
+
+		
+								public SPEAKERImage(TestObject parent, AppModelBase applicationModel) throws GeneralLeanFtException
+		{
+			super(parent, applicationModel);
+
+			
+			setDisplayName("SPEAKER");
+		}
+
+		@Override
+		protected com.hp.lft.sdk.web.ImageDescription createDescription() throws GeneralLeanFtException{
+			com.hp.lft.sdk.web.ImageDescription description = null; 
+			try{
+				description = new com.hp.lft.sdk.web.ImageDescription.Builder().alt("").className("imgProduct").src(new RegExpProperty(".*\\/catalog\\/fetchImage\\?image_id=4200")).tagName("IMG").type(com.hp.lft.sdk.web.ImageType.NORMAL).build();
 			}catch(Exception e){
 				throw new GeneralLeanFtException(e.getMessage(), e);
 			}
