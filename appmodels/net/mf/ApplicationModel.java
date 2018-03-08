@@ -26,6 +26,7 @@ public class ApplicationModel extends AppModelBase {		private SPEAKERS SPEAKERS;
 	private REMOVE REMOVE;
 	private CONTINUE_SHOPPING CONTINUE_SHOPPING;
 	private SPEAKER SPEAKER;
+	private TOTAL TOTAL;
 	
 	public ApplicationModel(TestObject contextTestObject) throws GeneralLeanFtException
 	{
@@ -39,6 +40,7 @@ public class ApplicationModel extends AppModelBase {		private SPEAKERS SPEAKERS;
 		REMOVE = new REMOVE(contextTestObject, this);
 		CONTINUE_SHOPPING = new CONTINUE_SHOPPING(contextTestObject, this);
 		SPEAKER = new SPEAKER(contextTestObject, this);
+		TOTAL = new TOTAL(contextTestObject, this);
 		rebuildDescriptions();
 	}	
 
@@ -51,6 +53,7 @@ public class ApplicationModel extends AppModelBase {		private SPEAKERS SPEAKERS;
 		public REMOVE REMOVE() { return REMOVE; }
 		public CONTINUE_SHOPPING CONTINUE_SHOPPING() { return CONTINUE_SHOPPING; }
 		public SPEAKER SPEAKER() { return SPEAKER; }
+		public TOTAL TOTAL() { return TOTAL; }
 
 		public class SPEAKERS extends LinkNodeBase
 	{
@@ -277,6 +280,32 @@ public class ApplicationModel extends AppModelBase {		private SPEAKERS SPEAKERS;
 			com.hp.lft.sdk.web.ImageDescription description = null; 
 			try{
 				description = new com.hp.lft.sdk.web.ImageDescription.Builder().alt("").className("imgProduct").src(new RegExpProperty(".*\\/catalog\\/fetchImage\\?image_id=4200")).tagName("IMG").type(com.hp.lft.sdk.web.ImageType.NORMAL).build();
+			}catch(Exception e){
+				throw new GeneralLeanFtException(e.getMessage(), e);
+			}
+			return description;
+		}
+
+				
+			}
+
+	public class TOTAL extends WebElementNodeBase
+	{
+
+		
+								public TOTAL(TestObject parent, AppModelBase applicationModel) throws GeneralLeanFtException
+		{
+			super(parent, applicationModel);
+
+			
+			setDisplayName("TOTAL");
+		}
+
+		@Override
+		protected com.hp.lft.sdk.web.WebElementDescription createDescription() throws GeneralLeanFtException{
+			com.hp.lft.sdk.web.WebElementDescription description = null; 
+			try{
+				description = new com.hp.lft.sdk.web.WebElementDescription.Builder().className("roboto-medium ng-binding").innerText(new RegExpProperty("\\$\\d.+\\.\\d\\d")).tagName("SPAN").build();
 			}catch(Exception e){
 				throw new GeneralLeanFtException(e.getMessage(), e);
 			}

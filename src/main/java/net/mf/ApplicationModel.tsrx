@@ -115,5 +115,17 @@
                 </properties>
             </identification>
         </object>
+        <object type="WebElement" technology="Web">
+            <name>TOTAL</name>
+            <codeName>TOTAL</codeName>
+            <description></description>
+            <identification>
+                <properties>
+                    <property name="ClassName" type="string" isRegExp="false">roboto-medium ng-binding</property>
+                    <property name="InnerText" type="string" isRegExp="true">\$\d.+\.\d\d</property>
+                    <property name="TagName" type="string" isRegExp="false">SPAN</property>
+                </properties>
+            </identification>
+        </object>
     </objects>
 </applicationModel>
